@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features Process | AI Healthcare Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-blue-600 p-4 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-bold flex items-center">
+                <i class="fas fa-heartbeat mr-2"></i> AI Health Engine
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-white hover:text-blue-200">Home</a>
+                <a href="features.html" class="text-white hover:text-blue-200">Features</a>
+                <a href="diagnosis.html" class="text-white hover:text-blue-200">Diagnosis</a>
+                <a href="about.html" class="text-white hover:text-blue-200">About</a>
+                <a href="contact.html" class="text-white hover:text-blue-200">Contact</a>
+            </div>
+            <button class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Features Process Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800">Features Working Process</h1>
+            <p class="text-lg text-center mb-12 text-gray-600 max-w-2xl mx-auto">An overview of how each feature works in the AI Healthcare Assistant.</p>
+
+            <!-- Medication Tracker -->
+            <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Medication Tracker</h2>
+                <p class="text-gray-600 mb-4">The Medication Tracker allows users to input their medication details, track their intake, and receive reminders.</p>
+                <h3 class="text-lg font-semibold mb-2">Code Implementation:</h3>
+                <pre class="bg-gray-100 p-4 rounded-lg"><code>
+document.getElementById('medication-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Get medication details
+    const medicationName = document.getElementById('medication-name').value;
+    const dosage = document.getElementById('dosage').value;
+    const frequency = document.getElementById('frequency').value;
+    const startDate = document.getElementById('start-date').value;
+    const endDate = document.getElementById('end-date').value;
+
+    // Create medication object
+    const medication = {
+        name: medicationName,
+        dosage: dosage,
+        frequency: frequency,
+        startDate: startDate,
+        endDate: endDate
+    };
+
+    // Store medication in local storage
+    let medications = JSON.parse(localStorage.getItem('medications')) || [];
+    medications.push(medication);
+    localStorage.setItem('medications', JSON.stringify(medications));
+
+    // Clear form fields
+    document.getElementById('medication-form').reset();
+
+    // Display updated medication list
+    displayMedications();
+});
+                </code></pre>
+            </div>
+
+            <!-- Diet Recommendations -->
+            <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Diet Recommendations</h2>
+                <p class="text-gray-600 mb-4">Users can select their health conditions to receive personalized diet plans.</p>
+                <h3 class="text-lg font-semibold mb-2">Code Implementation:</h3>
+                <pre class="bg-gray-100 p-4 rounded-lg"><code>
+document.getElementById('generate-diet').addEventListener('click', function() {
+    const condition = document.getElementById('health-condition').value;
+    if (!condition) return alert('Please select a health condition');
+    
+    const dietPlans = {
+        diabetes: {
+            breakfast: "Oatmeal with nuts and berries",
+            lunch: "Grilled chicken with quinoa and vegetables",
+            dinner: "Salmon with steamed broccoli"
+        },
+        hypertension: {
+            breakfast: "Greek yogurt with banana",
+            lunch: "Lentil soup with whole grain bread",
+            dinner: "Grilled fish with sweet potato"
+        }
+    };
+    
+    const plan = dietPlans[condition] || {
+        breakfast: "Balanced meal with protein and fiber",
+        lunch: "Lean protein with complex carbs",
+        dinner: "Light meal with vegetables"
+    };
+    
+    const dietPlan = document.getElementById('diet-plan');
+    dietPlan.innerHTML = `
+        <div class="bg-green-50 p-4 rounded-lg">
+            <h4 class="font-semibold text-green-700">Breakfast</h4>
+            <p>${plan.breakfast}</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+            <h4 class="font-semibold text-green-700">Lunch</h4>
+            <p>${plan.lunch}</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded-lg">
+            <h4 class="font-semibold text-green-700">Dinner</h4>
+            <p>${plan.dinner}</p>
+        </div>
+    `;
+});
+                </code></pre>
+            </div>
+
+            <!-- Health Monitoring -->
+            <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Health Monitoring</h2>
+                <p class="text-gray-600 mb-4">Users can track their vital signs and receive alerts for any concerning changes.</p>
+                <h3 class="text-lg font-semibold mb-2">Code Implementation:</h3>
+                <pre class="bg-gray-100 p-4 rounded-lg"><code>
+document.querySelector('#health-monitoring button').addEventListener('click', function() {
+    document.getElementById('health-trends').classList.remove('hidden');
+    // In a real app, we would save the data and generate charts
+});
+                </code></pre>
+            </div>
+
+            <!-- Genetic Insights -->
+            <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Genetic Insights</h2>
+                <p class="text-gray-600 mb-4">Users can upload their genetic data to receive personalized health insights.</p>
+                <h3 class="text-lg font-semibold mb-2">Code Implementation:</h3>
+                <pre class="bg-gray-100 p-4 rounded-lg"><code>
+document.getElementById('genetic-data').addEventListener('change', function(e) {
+    if (e.target.files.length) {
+        // Simulate processing time
+        setTimeout(() => {
+            document.getElementById('genetic-results').classList.remove('hidden');
+        }, 1500);
+    }
+});
+                </code></pre>
+            </div>
+
+            <!-- Doctor Connect -->
+            <div class="bg-white rounded-xl shadow-md p-8 mb-8">
+                <h2 class="text-2xl font-semibold mb-4 text-gray-800">Doctor Connect</h2>
+                <p class="text-gray-600 mb-4">Users can find and book appointments with healthcare professionals.</p>
+                <h3 class="text-lg font-semibold mb-2">Code Implementation:</h3>
+                <pre class="bg-gray-100 p-4 rounded-lg"><code>
+document.querySelector('#doctor-connect button').addEventListener('click', function() {
+    // Logic to search for doctors and book appointments
+});
+                </code></pre>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p>&copy; 2023 AI Health Engine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
