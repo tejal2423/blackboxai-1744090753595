@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | AI Health Engine</title>
+    <meta name="description" content="Learn about our mission to make health insights accessible through AI">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .about-hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/5327585/pexels-photo-5327585.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-xl font-bold text-indigo-600">AI Health Engine</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-indigo-600">Home</a>
+                    <a href="features.html" class="text-gray-700 hover:text-indigo-600">Features</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="index.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                    <a href="features.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Features</a>
+                    <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero text-white h-64 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-bold mb-4">About Our Mission</h1>
+            <p class="text-xl">Democratizing health insights through AI technology</p>
+        </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Our Story</h2>
+            <p class="text-gray-600 mb-6">
+                AI Health Engine was founded in 2023 with a simple goal: to make basic health insights accessible to everyone, 
+                regardless of their location or financial situation. Our team of healthcare professionals and AI experts came 
+                together to create a tool that bridges the gap between medical knowledge and everyday people.
+            </p>
+            <p class="text-gray-600">
+                Unlike traditional health services, we don't require appointments, insurance, or even an account. 
+                Our AI analyzes your symptoms and provides immediate, easy-to-understand insights that can help you 
+                make better health decisions.
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">How Our AI Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="text-center">
+                <div class="bg-indigo-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-database text-indigo-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Medical Knowledge Base</h3>
+                <p class="text-gray-600">
+                    Our AI is trained on thousands of medical cases and peer-reviewed research
+                </p>
+            </div>
+            <div class="text-center">
+                <div class="bg-indigo-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-project-diagram text-indigo-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Pattern Recognition</h3>
+                <p class="text-gray-600">
+                    Identifies symptom patterns and matches them with potential conditions
+                </p>
+            </div>
+            <div class="text-center">
+                <div class="bg-indigo-100 w-20 h-20 mx-auto rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-comment-medical text-indigo-600 text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Clear Communication</h3>
+                <p class="text-gray-600">
+                    Translates complex medical information into simple, actionable advice
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Team</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" alt="Dr. Sarah Johnson" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h3 class="text-xl font-semibold mb-1">Dr. Sarah Johnson</h3>
+                <p class="text-indigo-600 mb-3">Chief Medical Officer</p>
+                <p class="text-gray-600">
+                    Board-certified physician with 15 years of clinical experience
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" alt="Michael Chen" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h3 class="text-xl font-semibold mb-1">Michael Chen</h3>
+                <p class="text-indigo-600 mb-3">AI Research Lead</p>
+                <p class="text-gray-600">
+                    Machine learning expert specializing in healthcare applications
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://images.pexels.com/photos/3778602/pexels-photo-3778602.jpeg" alt="Lisa Rodriguez" class="w-32 h-32 mx-auto rounded-full object-cover mb-4">
+                <h3 class="text-xl font-semibold mb-1">Lisa Rodriguez</h3>
+                <p class="text-indigo-600 mb-3">Product Designer</p>
+                <p class="text-gray-600">
+                    Creates intuitive interfaces that make complex information accessible
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <h2 class="text-2xl font-bold mb-6 text-gray-800">Ready to Experience AI-Powered Health Insights?</h2>
+        <a href="index.html#assessment" class="bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition inline-block">
+            Start Free Assessment
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">AI Health Engine</h3>
+                    <p class="text-gray-400">Making health insights accessible to everyone</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 AI Health Engine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
