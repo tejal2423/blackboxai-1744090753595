@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom health-focused styles */
+.health-alert {
+  @apply border-l-4 p-4 my-4;
+}
+.health-alert-warning {
+  @apply health-alert border-yellow-400 bg-yellow-50 text-yellow-700;
+}
+.health-alert-danger {
+  @apply health-alert border-red-400 bg-red-50 text-red-700;
+}
+
+/* Animation for health notifications */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
