@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Health Engine | Instant Health Analysis</title>
+    <meta name="description" content="Get instant AI-powered health assessments without login">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-indigo-600">AI Health Engine</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-indigo-600">Home</a>
+                    <a href="features.html" class="text-gray-700 hover:text-indigo-600">Features</a>
+                    <a href="about.html" class="text-gray-700 hover:text-indigo-600">About</a>
+                    <a href="contact.html" class="text-gray-700 hover:text-indigo-600">Contact</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button">
+                        <i class="fas fa-bars text-gray-700 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu hidden md:hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Home</a>
+                    <a href="features.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Features</a>
+                    <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">About</a>
+                    <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-gray-50">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-image text-white h-96 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl font-bold mb-4">Instant Health Analysis</h1>
+                <p class="text-xl mb-8">No login required - Get AI-powered health insights in seconds</p>
+                <a href="#assessment" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-medium hover:bg-indigo-50 transition">Start Free Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assessment Section -->
+    <section id="assessment" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="bg-white rounded-xl shadow-md p-8">
+            <h2 class="text-2xl font-bold mb-6 text-gray-800">Health Assessment Form</h2>
+            <form id="healthForm" class="space-y-6">
+                <div>
+                    <label for="age" class="block text-sm font-medium text-gray-700">Your Age</label>
+                    <input type="number" id="age" name="age" min="1" max="120" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" required>
+                </div>
+                
+                <div>
+                    <label for="symptoms" class="block text-sm font-medium text-gray-700">Describe Your Symptoms</label>
+                    <textarea id="symptoms" name="symptoms" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="E.g. Headache, fever, fatigue..." required></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition">
+                    Analyze My Symptoms
+                </button>
+            </form>
+
+            <!-- Results Section -->
+            <div id="results" class="hidden mt-8 p-6 bg-gray-50 rounded-lg">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">AI Analysis Results</h3>
+                <div id="resultsContent" class="space-y-4"></div>
+                <button id="newAssessment" class="mt-6 text-indigo-600 hover:text-indigo-800">Start New Assessment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">How It Works</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <div class="text-indigo-600 mb-4">
+                    <i class="fas fa-edit text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">1. Describe Symptoms</h3>
+                <p class="text-gray-600">Simply enter your symptoms in plain English</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <div class="text-indigo-600 mb-4">
+                    <i class="fas fa-brain text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">2. AI Analysis</h3>
+                <p class="text-gray-600">Our AI processes your information instantly</p>
+            </div>
+            
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <div class="text-indigo-600 mb-4">
+                    <i class="fas fa-file-medical text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">3. Get Results</h3>
+                <p class="text-gray-600">Receive personalized health insights</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">AI Health Engine</h3>
+                    <p class="text-gray-400">Making health insights accessible to everyone</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="features.html" class="text-gray-400 hover:text-white">Features</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 AI Health Engine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
